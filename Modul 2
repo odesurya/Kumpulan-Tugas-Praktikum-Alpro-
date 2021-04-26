@@ -1,0 +1,23 @@
+//program bilangan fibonacci//
+//Ida Bagus Made Surya Widnyana 2008561092//
+#include <stdio.h>
+
+
+int main (){
+int i,c,angka;
+int a = 0;
+int b = 1;
+
+	printf ("masukan banyaknya baris fibonacci yang diinginkan: ");
+	scanf ("%d",&angka);
+	printf ("\n%d ",a);
+	printf ("%d ",b);
+        for (i=0;i<angka-2;i++){
+		  c=a+b;
+		  printf ("%d ",c);
+		  a=b;
+		  b=c;
+		}
+return 0;
+}
+
