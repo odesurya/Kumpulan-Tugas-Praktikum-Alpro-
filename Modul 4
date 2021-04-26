@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main(){
+    char kata[100], b[100];
+    printf("==========================================\n");
+    printf("       Ida Bagus Made Surya Widnyana      \n");
+    printf("                2008561092                \n");
+    printf("==========================================\n");
+    printf("Program Mengecek Kata - Kalimat Palindrom\n");
+    printf("\nInput Kata : ");
+     gets(kata);
+     strcpy(b,kata);// fungsi mengcopy kata pada variable kata
+     strrev(b); // fungsi membalik kata pada variable kata
+     if(strcmp(kata,b)== 0)//fungsi pembanding kata pada variable kata dan b jika tidak ada perbedaan maka polindrom
+     printf("\nKata '%s' merupakan kata polindrom\n", &kata);
+     else
+     printf("\nKata '%s' bukan merupakan kata polindrom\n", &kata);
+getch();
+}
