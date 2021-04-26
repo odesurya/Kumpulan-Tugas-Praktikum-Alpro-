@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct benda{
+	char namabenda[200];
+};
+
+int main(){
+	int limit = 25, input, pil, top, yakin, i, ulang;
+	int keluar;
+	struct benda data[200];
+
+	do{
+	system("cls");
+	printf("\n||=======================================================||");
+		printf("\n\t\t\tMENU UTAMA\n");
+		printf("||=======================================================||\n");
+		printf("\t\t1. Push\n");
+		printf("\t\t2. Pop\n");
+		printf("\t\t3. View\n");
+		printf("\t\t4. Exit\n");
+		printf("\n\t\t Masukkan Pilihan Anda : ");
+		scanf("%d",&pil);
+		printf("----------------------------------------------------------\n");
+        switch (pil){
+		case 1:
+			if(top==limit){
+				printf("Tumpukan Benda telah full");
+			}
+			else{
+				printf("Gunakan Tanda _ Sebagai Pengganti Spaci\n");
+				top++;
+				printf("\nMasukan Benda\t\t: ");
+				scanf("%s",&data[top].namabenda);
+			}
+		break;
+		case 2:
+			if(top == 0){
+				printf("\nMaaf Tidak Ada benda Dalam Tumpukan!\n");
+			}
+			else{
+				printf("\nApakah Anda Yakin Akan Mengambil Benda? (ketik 1 jika Yakin) : ");
+				scanf("%d",&yakin);
+				if (yakin == 1){
+					top--;
+				}
+			}
+		break;
+		case 3:
+			if (top==0){
+				printf("Tumpukan Kosong ");
+			}
+			else{
+				for(i=1;i<=top;i++){
+					printf("\n\t\tData Benda Ke-%d",i);
+					printf("\n\nNama Benda\t\t: %s\n",data[i].namabenda);
+					printf("===========================================================\n");
+				}
+			}
+        break ;
+        case 4:
+            goto keluar;
+        break ;
+		default:
+			printf("Maaf Pilihan Anda Salah!");
+        }
+        printf("\nApakah Anda Ingin Mengulang? (Ketik 1 Jika Ya) : ");
+		scanf("%d",&ulang);
+        keluar:
+	    printf("\nTerimakasih sudah menggunakan program stack ini\n");
+	}while(ulang==1);
+return 0;
+}
+
+
