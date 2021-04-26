@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main ()
+{
+    char nama[50];
+    char NIM[15];
+    char kelas[5];
+    char alamat[50];
+    char no [15];
+    int tanggal, tahun, umur;
+    char bulan1[20];
+
+    //input nama//
+    printf("masukkan nama anda :");
+    fgets(nama, sizeof(nama), stdin);
+    //input NIM//
+    printf("masukkan nim anda :");
+    scanf("%s", &NIM);
+    //input kelas//
+    printf("masukkan kelas anda :");
+    scanf("%s", &kelas);
+    //input alamat
+    printf("masukkan alamat anda :");
+    fflush(stdin);
+    fgets(alamat, sizeof(alamat), stdin);
+    //input nomer telepon//
+    printf("masukkan no telepon anda : ");
+    scanf("%s", &no);
+    //input tanggal lahir//
+    printf("masukkan tanggal lahir anda : ");
+    scanf("%d %s %d", &tanggal,&bulan1,&tahun);
+    //untuk menentukan umur//
+    umur=2021-tahun;
+
+    printf("\nterimakasih sudah mengisi data\n");
+    //menampilkan nama
+    printf("\nnama: %s", nama);
+    //menampilkan nim
+    printf("nim: %s", NIM);
+    //menampilkan kelas//
+    printf("\nkelas: %s", kelas);
+    //menampilkan alamat//
+    printf("\nalamat: %s", alamat);
+    //menampilkan nomer hp
+    printf("no hp: %s", no);
+    //menampilkan tanggal lahir
+    printf("\ntanggal lahir: %d %s %d", tanggal, bulan1, tahun);
+    //menampilkan umur//
+    printf("\numur : %d" , umur);
+return 0;
+}
